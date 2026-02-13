@@ -1,0 +1,125 @@
+/* =================================================================
+   Semantic Color Tokens — Light Mode
+   =================================================================
+   These tokens describe intent/purpose and alias back to primitives.
+   Source: Figma "Gabriel DS" — Variables
+
+   Architecture:
+     Primitive (raw value) → Semantic (intent) → Component (usage)
+     --color-brand-600     → --bg-brand-solid   → button bg
+   ================================================================= */
+
+:root {
+  /* ---------------------------------------------------------------
+     Background
+     --------------------------------------------------------------- */
+  --bg-brand-solid:            var(--color-brand-600);            /* #155EEF */
+  --bg-brand-solid-hover:      var(--color-brand-700);            /* #004EEB */
+  --bg-brand-solid-active:     var(--color-brand-800);            /* #0040C1 */
+
+  --bg-primary-solid:          var(--color-neutral-950);          /* #0A0A0A */
+  --bg-primary-solid-hover:    var(--color-neutral-800);          /* #262626 */
+  --bg-primary-solid-active:   var(--color-neutral-900);          /* #171717 */
+
+  --bg-primary:                var(--color-base-white);           /* #FFFFFF */
+  --bg-primary-hover:          var(--color-neutral-50);           /* #FAFAFA */
+  --bg-primary-active:         var(--color-neutral-100);          /* #F5F5F5 */
+
+  --bg-secondary:              var(--color-neutral-50);           /* #FAFAFA */
+  --bg-secondary-hover:        var(--color-neutral-100);          /* #F5F5F5 */
+  --bg-secondary-active:       var(--color-neutral-200);          /* #E5E5E5 */
+
+  --bg-disabled:               var(--color-neutral-50);           /* #FAFAFA */
+
+  /* ---------------------------------------------------------------
+     Text — Default (on regular surfaces)
+     --------------------------------------------------------------- */
+  --text-secondary:            var(--color-neutral-alpha-light-500);  /* rgba(0,0,0,0.55) */
+  --text-secondary-hover:      var(--color-neutral-alpha-light-600);  /* rgba(0,0,0,0.68) */
+  --text-secondary-active:     var(--color-neutral-alpha-light-700);  /* rgba(0,0,0,0.75) */
+
+  --text-tertiary:             var(--color-neutral-alpha-light-400);  /* rgba(0,0,0,0.36) */
+  --text-tertiary-hover:       var(--color-neutral-alpha-light-500);  /* rgba(0,0,0,0.55) */
+
+  --text-disabled:             var(--color-neutral-alpha-light-300);  /* rgba(0,0,0,0.17) */
+
+  /* ---------------------------------------------------------------
+     Text — Brand
+     --------------------------------------------------------------- */
+  --text-brand-secondary:        var(--color-brand-700);           /* #004EEB */
+  --text-brand-secondary-hover:  var(--color-brand-600);           /* #155EEF */
+  --text-brand-secondary-active: var(--color-brand-800);           /* #0040C1 */
+
+  /* ---------------------------------------------------------------
+     Text — On Color (on solid fills like brand-solid, primary-solid)
+     --------------------------------------------------------------- */
+  --text-on-color:                  var(--color-base-white);              /* #FFFFFF */
+
+  --text-on-color-secondary:        var(--color-neutral-alpha-dark-900);  /* rgba(255,255,255,0.91) */
+  --text-on-color-secondary-hover:  var(--color-neutral-alpha-dark-800);  /* rgba(255,255,255,0.85) */
+
+  --text-on-color-tertiary:         var(--color-neutral-alpha-dark-600);  /* rgba(255,255,255,0.68) */
+  --text-on-color-tertiary-hover:   var(--color-neutral-alpha-dark-500);  /* rgba(255,255,255,0.55) */
+
+  /* ---------------------------------------------------------------
+     Border
+     --------------------------------------------------------------- */
+  --border-tertiary:           var(--color-neutral-alpha-light-100);  /* rgba(0,0,0,0.04) */
+  --border-disabled:           var(--color-neutral-alpha-light-200);  /* rgba(0,0,0,0.10) */
+
+  /* ---------------------------------------------------------------
+     Icon
+     --------------------------------------------------------------- */
+  --icon-brand:                var(--color-brand-300);            /* #84ADFF */
+  --icon-brand-hover:          var(--color-brand-200);            /* #B2CCFF */
+
+  /* ---------------------------------------------------------------
+     Focus
+     --------------------------------------------------------------- */
+  --focus-ring:                var(--color-brand-500);            /* #2970FF */
+
+  /* ---------------------------------------------------------------
+     Shadows (composite)
+     Shadow base color: #0A0D12 (dark blue-gray) with opacity
+     --------------------------------------------------------------- */
+  --shadow-xs:
+    0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+
+  --shadow-xs-skeuomorphic:
+    0px 1px 2px 0px rgba(10, 13, 18, 0.05),
+    inset 0px -2px 0px 0px rgba(10, 13, 18, 0.05),
+    inset 0px 0px 0px 1px rgba(10, 13, 18, 0.18);
+
+  --shadow-focus-ring:
+    0 0 0 2px var(--bg-primary),
+    0 0 0 4px var(--focus-ring);
+
+  --shadow-focus-ring-xs:
+    0 0 0 2px var(--bg-primary),
+    0 0 0 4px var(--focus-ring),
+    0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+
+  --shadow-focus-ring-xs-skeuomorphic:
+    0 0 0 2px var(--bg-primary),
+    0 0 0 4px var(--focus-ring),
+    0px 1px 2px 0px rgba(10, 13, 18, 0.05),
+    inset 0px -2px 0px 0px rgba(10, 13, 18, 0.05),
+    inset 0px 0px 0px 1px rgba(10, 13, 18, 0.18);
+}
+
+/* =================================================================
+   Dark Mode
+   =================================================================
+   Override semantic tokens here. Primitives stay the same;
+   only the aliases change.
+
+   Example:
+   [data-theme="dark"] {
+     --bg-brand-solid:         var(--color-brand-500);
+     --bg-primary-solid:       var(--color-base-white);
+     --bg-primary:             var(--color-neutral-950);
+     --text-secondary:         var(--color-neutral-alpha-dark-500);
+     --border-tertiary:        var(--color-neutral-alpha-dark-100);
+     ...
+   }
+   ================================================================= */

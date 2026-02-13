@@ -1,0 +1,27 @@
+/* Skeuomorphic inner border — white semi-transparent overlay for solid buttons */
+[data-slot="button"][data-hierarchy="accent-primary"],
+[data-slot="button"][data-hierarchy="neutral-primary"] {
+  position: relative;
+  overflow: hidden;
+}
+
+[data-slot="button"][data-hierarchy="accent-primary"]::after,
+[data-slot="button"][data-hierarchy="neutral-primary"]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.20), rgba(255, 255, 255, 0));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Hide pseudo-element on disabled */
+[data-slot="button"]:disabled::after {
+  display: none;
+}
