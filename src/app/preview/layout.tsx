@@ -2,7 +2,9 @@ import Link from "next/link";
 
 const components = [
   { name: "Tokens", href: "/preview/tokens" },
+  { name: "Typography", href: "/preview/typography" },
   { name: "Button", href: "/preview/button" },
+  { name: "Text Field", href: "/preview/text-field" },
 ];
 
 export default function PreviewLayout({

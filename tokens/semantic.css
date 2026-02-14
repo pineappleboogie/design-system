@@ -34,6 +34,7 @@
   /* ---------------------------------------------------------------
      Text — Default (on regular surfaces)
      --------------------------------------------------------------- */
+  --text-primary:              var(--color-neutral-alpha-light-900);  /* rgba(0,0,0,0.91) */
   --text-secondary:            var(--color-neutral-alpha-light-500);  /* rgba(0,0,0,0.55) */
   --text-secondary-hover:      var(--color-neutral-alpha-light-600);  /* rgba(0,0,0,0.68) */
   --text-secondary-active:     var(--color-neutral-alpha-light-700);  /* rgba(0,0,0,0.75) */
@@ -42,6 +43,8 @@
   --text-tertiary-hover:       var(--color-neutral-alpha-light-500);  /* rgba(0,0,0,0.55) */
 
   --text-disabled:             var(--color-neutral-alpha-light-300);  /* rgba(0,0,0,0.17) */
+
+  --text-error:                var(--color-error-600);                /* #D92D20 */
 
   /* ---------------------------------------------------------------
      Text — Brand
@@ -64,8 +67,12 @@
   /* ---------------------------------------------------------------
      Border
      --------------------------------------------------------------- */
+  --border-primary:            var(--color-neutral-alpha-light-300);  /* rgba(0,0,0,0.17) */
+  --border-primary-hover:      var(--color-neutral-alpha-light-400);  /* rgba(0,0,0,0.36) */
   --border-tertiary:           var(--color-neutral-alpha-light-100);  /* rgba(0,0,0,0.04) */
   --border-disabled:           var(--color-neutral-alpha-light-200);  /* rgba(0,0,0,0.10) */
+  --border-error:              var(--color-error-500);                /* #F04438 */
+  --border-error-hover:        var(--color-error-600);                /* #D92D20 */
 
   /* ---------------------------------------------------------------
      Icon
@@ -76,35 +83,62 @@
   /* ---------------------------------------------------------------
      Focus
      --------------------------------------------------------------- */
-  --focus-ring:                var(--color-brand-500);            /* #2970FF */
+  --focus-ring:                var(--color-brand-200);            /* #B2CCFF */
+  --focus-ring-error:          var(--color-error-200);            /* #FECDCA */
 
   /* ---------------------------------------------------------------
      Shadows (composite)
-     Shadow base color: #0A0D12 (dark blue-gray) with opacity
+     Drop shadow color: --color-shadow-xs (primitives.css)
      --------------------------------------------------------------- */
   --shadow-xs:
-    0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+    0px 1px 2px 0px var(--color-shadow-xs);
 
   --shadow-xs-skeuomorphic:
-    0px 1px 2px 0px rgba(10, 13, 18, 0.05),
-    inset 0px -2px 0px 0px rgba(10, 13, 18, 0.05),
-    inset 0px 0px 0px 1px rgba(10, 13, 18, 0.18);
+    0px 1px 2px 0px var(--color-shadow-xs),
+    inset 0px -2px 0px 0px var(--color-shadow-xs),
+    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.18);
 
   --shadow-focus-ring:
-    0 0 0 2px var(--bg-primary),
     0 0 0 4px var(--focus-ring);
 
   --shadow-focus-ring-xs:
-    0 0 0 2px var(--bg-primary),
     0 0 0 4px var(--focus-ring),
-    0px 1px 2px 0px rgba(10, 13, 18, 0.05);
+    0px 1px 2px 0px var(--color-shadow-xs);
 
   --shadow-focus-ring-xs-skeuomorphic:
-    0 0 0 2px var(--bg-primary),
     0 0 0 4px var(--focus-ring),
-    0px 1px 2px 0px rgba(10, 13, 18, 0.05),
-    inset 0px -2px 0px 0px rgba(10, 13, 18, 0.05),
-    inset 0px 0px 0px 1px rgba(10, 13, 18, 0.18);
+    0px 1px 2px 0px var(--color-shadow-xs),
+    inset 0px -2px 0px 0px var(--color-shadow-xs),
+    inset 0px 0px 0px 1px rgba(0, 0, 0, 0.18);
+
+  /* ---------------------------------------------------------------
+     Input Shadows (border via box-shadow for seamless focus transition)
+     --------------------------------------------------------------- */
+  --shadow-input:
+    0 0 0 1px var(--border-primary),
+    0px 1px 2px 0px var(--color-shadow-xs);
+
+  --shadow-input-hover:
+    0 0 0 1px var(--border-primary-hover),
+    0px 1px 2px 0px var(--color-shadow-xs);
+
+  --shadow-input-focus:
+    0 0 0 1px var(--border-primary-hover),
+    0px 1px 2px 0px var(--color-shadow-xs),
+    0 0 0 4px var(--focus-ring);
+
+  --shadow-input-error:
+    0 0 0 1px var(--border-error),
+    0px 1px 2px 0px var(--color-shadow-xs);
+
+  --shadow-input-error-hover:
+    0 0 0 1px var(--border-error-hover),
+    0px 1px 2px 0px var(--color-shadow-xs);
+
+  --shadow-input-error-focus:
+    0 0 0 1px var(--border-error-hover),
+    0px 1px 2px 0px var(--color-shadow-xs),
+    0 0 0 4px var(--focus-ring-error);
 }
 
 /* =================================================================

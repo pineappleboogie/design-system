@@ -5,6 +5,7 @@
 /* Design system tokens */
 @import "../../tokens/primitives.css";
 @import "../../tokens/primitives.radius.css";
+@import "../../tokens/primitives.typography.css";
 @import "../../tokens/semantic.css";
 
 @custom-variant dark (&:is(.dark *));
@@ -12,8 +13,68 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
+
+  /* ---- Typography: Label (single-line, tight leading) ---- */
+  --text-label-12: var(--font-size-12);
+  --text-label-12--line-height: var(--line-height-16);
+  --text-label-12-caps: var(--font-size-12);
+  --text-label-12-caps--line-height: var(--line-height-16);
+  --text-label-12-caps--letter-spacing: var(--tracking-wide);
+  --text-label-13: var(--font-size-13);
+  --text-label-13--line-height: var(--line-height-16);
+  --text-label-14: var(--font-size-14);
+  --text-label-14--line-height: var(--line-height-20);
+  --text-label-16: var(--font-size-16);
+  --text-label-16--line-height: var(--line-height-20);
+  --text-label-18: var(--font-size-18);
+  --text-label-18--line-height: var(--line-height-24);
+  --text-label-20: var(--font-size-20);
+  --text-label-20--line-height: var(--line-height-32);
+
+  /* ---- Typography: Copy (multi-line, looser leading) ---- */
+  --text-copy-12: var(--font-size-12);
+  --text-copy-12--line-height: var(--line-height-18);
+  --text-copy-13: var(--font-size-13);
+  --text-copy-13--line-height: var(--line-height-18);
+  --text-copy-14: var(--font-size-14);
+  --text-copy-14--line-height: var(--line-height-20);
+  --text-copy-16: var(--font-size-16);
+  --text-copy-16--line-height: var(--line-height-24);
+  --text-copy-18: var(--font-size-18);
+  --text-copy-18--line-height: var(--line-height-28);
+  --text-copy-20: var(--font-size-20);
+  --text-copy-20--line-height: var(--line-height-36);
+
+  /* ---- Typography: Heading (titles, negative tracking at larger sizes) ---- */
+  --text-heading-14: var(--font-size-14);
+  --text-heading-14--line-height: var(--line-height-20);
+  --text-heading-16: var(--font-size-16);
+  --text-heading-16--line-height: var(--line-height-24);
+  --text-heading-20: var(--font-size-20);
+  --text-heading-20--line-height: var(--line-height-28);
+  --text-heading-24: var(--font-size-24);
+  --text-heading-24--line-height: var(--line-height-32);
+  --text-heading-24--letter-spacing: var(--tracking-tight);
+  --text-heading-32: var(--font-size-32);
+  --text-heading-32--line-height: var(--line-height-40);
+  --text-heading-32--letter-spacing: var(--tracking-tight);
+  --text-heading-40: var(--font-size-40);
+  --text-heading-40--line-height: var(--line-height-56);
+  --text-heading-40--letter-spacing: var(--tracking-tight);
+  --text-heading-48: var(--font-size-48);
+  --text-heading-48--line-height: var(--line-height-56);
+  --text-heading-48--letter-spacing: var(--tracking-tighter);
+  --text-heading-56: var(--font-size-56);
+  --text-heading-56--line-height: var(--line-height-64);
+  --text-heading-56--letter-spacing: var(--tracking-tighter);
+  --text-heading-64: var(--font-size-64);
+  --text-heading-64--line-height: var(--line-height-72);
+  --text-heading-64--letter-spacing: var(--tracking-tighter);
+  --text-heading-72: var(--font-size-72);
+  --text-heading-72--line-height: var(--line-height-80);
+  --text-heading-72--letter-spacing: var(--tracking-tighter);
 
   /* shadcn color aliases */
   --color-card: var(--card);
@@ -39,6 +100,12 @@
   --shadow-focus-ring: var(--shadow-focus-ring);
   --shadow-focus-ring-xs: var(--shadow-focus-ring-xs);
   --shadow-focus-ring-xs-skeuomorphic: var(--shadow-focus-ring-xs-skeuomorphic);
+  --shadow-input: var(--shadow-input);
+  --shadow-input-hover: var(--shadow-input-hover);
+  --shadow-input-focus: var(--shadow-input-focus);
+  --shadow-input-error: var(--shadow-input-error);
+  --shadow-input-error-hover: var(--shadow-input-error-hover);
+  --shadow-input-error-focus: var(--shadow-input-error-focus);
 
   /* Radius from design tokens */
   --radius-none: var(--radius-none);

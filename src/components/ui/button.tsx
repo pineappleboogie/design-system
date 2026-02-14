@@ -9,8 +9,8 @@ import "./button.css";
 const buttonVariants = cva(
   [
     "inline-flex items-center justify-center whitespace-nowrap font-semibold",
-    "transition-colors cursor-pointer",
-    "outline-2 outline-offset-2 outline-transparent focus-visible:outline-[var(--focus-ring)]",
+    "transition-[color,background-color,border-color,box-shadow] cursor-pointer",
+    "outline-none",
     "disabled:cursor-not-allowed",
   ],
   {
@@ -21,6 +21,7 @@ const buttonVariants = cva(
           "shadow-xs-skeuomorphic",
           "hover:bg-[var(--bg-brand-solid-hover)]",
           "active:bg-[var(--bg-brand-solid-active)]",
+          "focus-visible:shadow-focus-ring-xs-skeuomorphic",
 
           "disabled:bg-[var(--bg-disabled)] disabled:text-[var(--text-disabled)] disabled:shadow-none",
         ],
@@ -29,6 +30,7 @@ const buttonVariants = cva(
           "shadow-xs-skeuomorphic",
           "hover:bg-[var(--bg-primary-solid-hover)]",
           "active:bg-[var(--bg-primary-solid-active)]",
+          "focus-visible:shadow-focus-ring-xs-skeuomorphic",
 
           "disabled:bg-[var(--bg-disabled)] disabled:text-[var(--text-disabled)] disabled:shadow-none",
         ],
@@ -36,6 +38,7 @@ const buttonVariants = cva(
           "bg-[var(--bg-secondary)] text-[var(--text-secondary)]",
           "hover:bg-[var(--bg-secondary-hover)] hover:text-[var(--text-secondary-hover)]",
           "active:bg-[var(--bg-secondary-active)] active:text-[var(--text-secondary-active)]",
+          "focus-visible:shadow-focus-ring",
 
           "disabled:bg-[var(--bg-disabled)] disabled:text-[var(--text-disabled)]",
         ],
@@ -45,6 +48,7 @@ const buttonVariants = cva(
           "shadow-xs-skeuomorphic",
           "hover:bg-[var(--bg-primary-hover)] hover:text-[var(--text-secondary-hover)]",
           "active:bg-[var(--bg-primary-active)] active:text-[var(--text-secondary-active)]",
+          "focus-visible:shadow-focus-ring-xs-skeuomorphic",
 
           "disabled:bg-[var(--bg-disabled)] disabled:text-[var(--text-disabled)] disabled:border-[var(--border-disabled)] disabled:shadow-none",
         ],
@@ -52,6 +56,7 @@ const buttonVariants = cva(
           "bg-transparent text-[var(--text-secondary)]",
           "hover:bg-[var(--bg-secondary)] hover:text-[var(--text-secondary-hover)]",
           "active:bg-[var(--bg-secondary-active)] active:text-[var(--text-secondary-active)]",
+          "focus-visible:shadow-focus-ring",
 
           "disabled:bg-transparent disabled:text-[var(--text-disabled)]",
         ],
@@ -59,6 +64,7 @@ const buttonVariants = cva(
           "bg-transparent text-[var(--text-brand-secondary)]",
           "hover:text-[var(--text-brand-secondary-hover)]",
           "active:text-[var(--text-brand-secondary-active)]",
+          "focus-visible:shadow-focus-ring",
 
           "disabled:text-[var(--text-disabled)]",
         ],
@@ -66,15 +72,16 @@ const buttonVariants = cva(
           "bg-transparent text-[var(--text-secondary)]",
           "hover:text-[var(--text-secondary-hover)]",
           "active:text-[var(--text-secondary-active)]",
+          "focus-visible:shadow-focus-ring",
 
           "disabled:text-[var(--text-disabled)]",
         ],
       },
       size: {
-        sm: "h-8 gap-1 rounded-lg text-sm px-3",
-        md: "h-10 gap-1 rounded-lg text-sm px-3.5",
-        lg: "h-11 gap-1.5 rounded-lg text-base px-4",
-        xl: "h-12 gap-1.5 rounded-lg text-base px-[18px]",
+        sm: "h-8 gap-1 rounded-lg text-label-14 px-3",
+        md: "h-10 gap-1 rounded-lg text-label-14 px-3.5",
+        lg: "h-11 gap-1.5 rounded-lg text-label-16 px-4",
+        xl: "h-12 gap-1.5 rounded-lg text-label-16 px-[18px]",
       },
       iconOnly: {
         true: "p-0",

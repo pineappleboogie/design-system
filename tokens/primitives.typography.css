@@ -1,0 +1,46 @@
+:root {
+  /* Font Family */
+  --font-family-display: 'Inter', sans-serif;
+  --font-family-body: 'Inter', sans-serif;
+
+  /* Font Weight */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Font Size */
+  --font-size-12: 0.75rem;
+  --font-size-13: 0.8125rem;
+  --font-size-14: 0.875rem;
+  --font-size-16: 1rem;
+  --font-size-18: 1.125rem;
+  --font-size-20: 1.25rem;
+  --font-size-24: 1.5rem;
+  --font-size-32: 2rem;
+  --font-size-40: 2.5rem;
+  --font-size-48: 3rem;
+  --font-size-56: 3.5rem;
+  --font-size-64: 4rem;
+  --font-size-72: 4.5rem;
+
+  /* Line Height */
+  --line-height-16: 1rem;
+  --line-height-18: 1.125rem;
+  --line-height-20: 1.25rem;
+  --line-height-24: 1.5rem;
+  --line-height-28: 1.75rem;
+  --line-height-32: 2rem;
+  --line-height-36: 2.25rem;
+  --line-height-40: 2.5rem;
+  --line-height-56: 3.5rem;
+  --line-height-64: 4rem;
+  --line-height-72: 4.5rem;
+  --line-height-80: 5rem;
+
+  /* Letter Spacing */
+  --tracking-tighter: -0.04em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.05em;
+}
